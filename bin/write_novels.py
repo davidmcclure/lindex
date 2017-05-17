@@ -1,7 +1,7 @@
 
 
 from pyspark import SparkContext
-from pyspark.sql import SparkSession
+from pyspark.sql import SparkSession, Row
 
 from lindex import ChicagoNovel
 
@@ -27,6 +27,10 @@ if __name__ == '__main__':
             nationality='nationality %d' % i,
             genre='genre %d' % i,
             text='text %d' % i,
+            tokens=[
+                Row(token='one', pos='CD'),
+                Row(token='two', pos='CD'),
+            ]
         )
 
         for i in range(1000)
