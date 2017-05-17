@@ -1,0 +1,4 @@
+
+# lindex
+
+Literary index.
